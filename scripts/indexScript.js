@@ -1,6 +1,4 @@
 $(document).ready(function () {    
-      //initial check to make sure jquery loaded
-      //alert('jquery loaded');
       var randomQuote;
       var author
       var quotePlusAuthor
@@ -18,9 +16,8 @@ $(document).ready(function () {
 
       $("#quoteBtn").on("click", function(){
           quote();
-          
-
       });
+
       $("#tweetBtn").on("click", function() {
         window.open("https://twitter.com/intent/tweet?text=" + quotePlusAuthor);
       });

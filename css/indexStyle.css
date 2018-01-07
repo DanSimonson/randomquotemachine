@@ -1,0 +1,16 @@
+body {
+    padding-top: 20px;
+}
+.container .jumbotron {
+    background-color: black;
+    color: #fff;
+    font-size: 18px;
+}
+img {
+    width: 60%;
+    height: 20%;
+    border-radius: 10px;
+}
+.fa-heart {
+    color: red;
+}
