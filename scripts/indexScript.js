@@ -19,7 +19,10 @@ $(document).ready(function () {
       });
 
       $("#tweetBtn").on("click", function() {
-        window.open("https://twitter.com/intent/tweet?text=" + quotePlusAuthor);
+        if (typeof quotePlusAuthor !== "undefined") {
+            window.open("https://twitter.com/intent/tweet?text=" + quotePlusAuthor);
+        } else {
+            alert('Please generate a quote to tweet');
+        }        
       });
-
 });
