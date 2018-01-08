@@ -1,15 +1,11 @@
 $(document).ready(function () {    
-      var randomQuote;
-      var author
-      var quotePlusAuthor
+     
+      var quotePlusAuthor;
 
       function quote(){
         $.getJSON("https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?", function(data){
-            randomQuote = data.quoteText;
-            author = data.quoteAuthor;
-            quotePlusAuthor = randomQuote + "~" + author;
-            $(".quote").html('"'+data.quoteText+'"');
-            
+            quotePlusAuthor = data.quoteText +"~"+ data.quoteAuthor;
+            $(".quote").html('"'+data.quoteText+'"');            
             $(".author").html("~"+data.quoteAuthor);
         });
       };
